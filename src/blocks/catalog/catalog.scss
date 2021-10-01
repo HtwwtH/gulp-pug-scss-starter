@@ -1,0 +1,100 @@
+@import '../../scss/includes/mixins';
+@import '../../scss/includes/variables';
+@import '../../scss/includes/helpers';
+
+.catalog {
+  margin-top: 35px;
+
+  h1,
+  .h2 {
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+
+    h1,
+    .h2 {
+      margin-bottom: 20px;
+
+      @include md() {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__aside {
+    display: none;
+
+    @include lg() {
+      display: block;
+      width: 25%;
+      padding-right: 30px;
+      padding-bottom: 30px;
+    }
+
+    &--full {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  &__cont {
+    width: 75%;
+  }
+
+  &__view {
+    display: flex;
+
+    &-links {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+
+      & > * + * {
+        margin-left: 30px;
+      }
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $colorDark;
+
+      &.active {
+        color: $colorRedLigth;
+        border-bottom: 1px dashed $colorRedLigth;
+      }
+    }
+
+    &-switch {
+      display: flex;
+      flex-grow: 1;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    &-button {
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      padding: 6px;
+      border-radius: 0;
+
+      .icon {
+        color: $colorGrayLigth;
+      }
+
+      &.active {
+        .icon {
+          color: $colorRedText;
+        }
+      }
+    }
+  }
+}

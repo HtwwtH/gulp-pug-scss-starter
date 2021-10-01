@@ -1,0 +1,156 @@
+.h1, h1,
+.h2, h2,
+.h3, h3,
+.h4, h4,
+.h5, h5,
+.h6, h6 {
+  font-weight: 500;
+  margin: calculateRem(24px) 0 0;
+  line-height: 1.1;
+}
+
+.h1, h1 {
+  @include fontSize(40px);
+}
+
+.h2, h2 {
+  @include fontSize(32px);
+}
+
+.h3, h3 {
+  @include fontSize(26px);
+}
+
+.h4, h4 {
+  @include fontSize(18px);
+}
+
+.h5, h5 {
+  @include fontSize(15px);
+}
+
+.h6, h6 {
+  @include fontSize(13px);
+}
+
+.text-link-gray {
+  @include fontSize(13px);
+  color: $colorGray;
+  transition: 0.3s color ease;
+  display: inline-block;
+  vertical-align: top;
+  text-decoration: none;
+
+  &:hover {
+    color: $colorRedLigth;
+  }
+}
+
+p {
+  margin: calculateRem(24px) 0;
+}
+
+.content {
+  ul {
+    padding: 0;
+    list-style-type: none;
+    margin: calculateRem(24px) 0;
+    li {
+      margin: calculateRem(10px) 0;
+      padding-left: 14px;
+      &:before {
+        content: " ";
+        width: 4px;
+        height: 4px;
+        background-color: $colorRedText;
+        overflow: hidden;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: -14px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  ol {
+    padding: 0;
+    list-style-type: none;
+    margin: calculateRem(24px) 0;
+    counter-reset: li;
+    li {
+      margin: calculateRem(10px) 0;
+      padding-left: 24px;
+      counter-increment: li;
+      &:before {
+        font-weight: 500;
+        content: counter(li);
+        width: 24px;
+        color: $colorRedText;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: -24px;
+      }
+    }
+  }
+
+  dl {
+    margin: calculateRem(24px) 0;
+    dt {
+      font-weight: 500;
+      margin-top: calculateRem(24px);
+    }
+    dd {
+      margin: 0;
+    }
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    &+p, &+ul, &+ol {
+      margin-top: calculateRem(10px);
+    }
+  }
+
+}
+
+blockquote {
+  margin: calculateRem(24px) 0;
+  padding: 20px 24px 20px 28px;
+  border-left: 3px solid $colorRedLigth;
+}
+blockquote.danger {
+  background-color: #FDF5F5;
+}
+
+.text-content {
+  max-width: calc(100% / 1.5);
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+
+.text-info {
+  color: $colorGrayLigth-6;
+  padding: 50px 0 30px 0;
+  border-top: 1px solid $colorGrayLigth-7;
+
+  p {
+    font-weight: 300;
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 15px;
+    margin: 44px 0 10px;
+  }
+}
+
+a.pseudo {
+  color: $colorRedText;
+  border-bottom: 1px dashed $colorRedText;
+  text-decoration: none;
+}
+
+hr {
+  border: 1px solid #E0E0E0;
+}

@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		title Title your site
+		meta(content="width=device-width, initial-scale=1" name="viewport")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
+		link(rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon") 
+		link(href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet")
+		link(rel="stylesheet" href="css/main.css")
+		block head
+	body
+    .page__wrapper
+      include ../../blocks/header/header
+
+      main#main
+        block content
+
+      include ../../blocks/footer/footer
+
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js' integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+    block scripts
+    script(src='js/main.js')
+		

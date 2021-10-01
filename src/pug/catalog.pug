@@ -1,0 +1,26 @@
+extends layout/layout
+
+block head
+	link(rel="stylesheet", href="blocks/catalog-category/catalog-category.css")
+	link(rel="stylesheet", href="blocks/manufacturers/manufacturers.css")
+block content
+	include blocks/_header
+	.main-container
+		ul.breadcrumbs
+			li.breadcrumbs__item
+				a(href="").breadcrumbs__link Главная
+			li.breadcrumbs__item /
+			li.breadcrumbs__item
+				a(href="").breadcrumbs__link Каталог складской техники
+			li.breadcrumbs__item / Каталог техники
+	include ../blocks/catalog-category/catalog-category-all
+	include ../blocks/manufacturers/manufacturers
+	.main-container
+		.text-content
+			p Всемирно известный концерн Anhui Heli Co., Ltd представил вниманию своих покупателей «свежую» модель – рич-трак GROS серии CQD. Это идеальный вариант для погрузочно-разгрузочных работ. Данная техника способна обеспечить безопасность при эксплуатации, она легко управляема, эффективна, надёжна и мобильна.
+			p Сложно привести более веский аргумент в пользу покупки ричтрака GROS,чем доверие и признание покупателей по всему миру, которое за непродолжительное время успела снискать данная модель. Двигатели переменного тока – удачная находка создателей складской техники. Однако в новой модели рич-трака GROS их конструкция была оптимизирована, что позволило сделать устройство более управляемым, а также снизить количество потребляемой энергии.
+			p GROS – высококачественная техника, от ведущего китайского производителя строительной и погрузочной техники. Anhui Heli Co., Ltd производит свыше 10 тысяч наименований складского и промышленного транспортного оборудования. Благодаря широкому ассортименту и высокой степени надежности поставляемой техники, а также наличию сервисной службы и технической базы мы обеспечиваем эффективное, высокопроизводительное выполнение любых производственных циклов. Департамент строительной и погрузочной техники в компании Anhui Forklift Truck был образован в 1958 году.
+	include blocks/_footer
+block scripts
+	script(src="blocks/popular-goods/scripts.js")
+	script(src="blocks/manufacturers/scripts.js")

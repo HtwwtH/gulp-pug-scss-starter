@@ -1,0 +1,20 @@
+extends layout/layout
+
+block head
+  link(rel='stylesheet', href='css/blocks.css')
+block content
+  include blocks/_header
+  .main-container
+    ul.breadcrumbs
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href='') Главная
+      li.breadcrumbs__item /
+      li.breadcrumbs__item
+        a.breadcrumbs__link(href='') О компании
+      li.breadcrumbs__item / Контакты
+
+    include ../blocks/contacts/contacts
+
+  include blocks/_footer
+block scripts
+  script(src='js/blocks.js')
